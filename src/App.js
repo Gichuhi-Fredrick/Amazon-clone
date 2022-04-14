@@ -19,7 +19,7 @@ const promise = loadStripe(
 
 function App() {
   // leave the empty object intact
-  const [{}, dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
 
   useEffect(() => {
     // Will run once the app components loads
@@ -40,6 +40,7 @@ function App() {
         });
       }
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
